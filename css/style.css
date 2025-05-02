@@ -9,6 +9,12 @@
     text-decoration: none;
     color: #333;
   }
+
+.wrap {
+    position: relative;
+    height: 100%;
+  }
+
   header {
     position: fixed;
     left: 0;
@@ -130,6 +136,9 @@
     background: #222;
   }
 
+    /* 스와이퍼 */
+
+
   /* 디지털 혁신을 위한 파트너, 웅진 */
   .woonggin{
     width: 1700px;
@@ -200,3 +209,186 @@
 
 .digital ul li:nth-child(3){background: url(../images/digital/cloud_2.png) center/cover;}
 .digital ul li:nth-child(3):hover{background: url(../images/digital/solution_light_2.png) center/cover;}
+
+
+/* 기업에 최적화된 웅진의 IT 서비스 */
+
+.service ul{
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+.service ul li{
+  width: 100%;
+  height: 280px;
+  position: relative;
+  bottom: 0px;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.service ul li:hover{
+  position: relative;
+  bottom: 10px;
+  background: #aa7944;
+  color: #fff;
+}
+.service_con{
+  position: relative;
+  padding: 100px 0 58px 46px;
+  box-sizing: border-box;
+}
+.service ul li .service_con > p{
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  background: #aa7944;
+  color: #fff;
+  padding: 13px 28px;
+  font-weight: bold;
+}
+.service ul li:hover .service_con > p{
+  background: #fff;
+  color: #aa7944;
+}
+.service_txt h2{
+  font-size: 40.5px;
+}
+.service_txt p{
+    font-size: 18px;
+    letter-spacing: -1.55px;
+    line-height: 29px;
+}
+
+.service_graph{
+  width: 1400px;
+  margin: 50px auto;
+  display: flex;
+  background: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+ color: #aa7944;
+}
+.service_graph div{
+  flex: 1 1 30%;
+  padding: 20px 50px;
+  position: relative;
+}
+.service_graph div::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 100px;
+  background: #aa7944;
+}
+.service_graph div:first-child:after{
+  display: none;
+}
+.service_graph h1{font-size: 47px;}
+.service_graph p{font-size: 23px;}
+
+/* 채용정보 */
+
+.employment_con{
+  height: 100%;
+  background-image: url(../images/careersBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 220px 0px 0px 139px;
+  box-sizing: border-box;
+}
+.employment_title h1{
+  font-size: 54px;
+  margin-bottom: 20px;
+}
+.employment_title p{
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.employment01{
+  line-height: 50px;
+ 
+}
+.employment01 a{
+  display: block;
+  width: 280px;
+  color: #000;
+  border-bottom: 1px solid;
+}
+
+.woonggin_news{
+  position: relative;
+  vertical-align: top;
+  right: -1000px;
+  top: -200px;
+}
+.woonggin_news div:first-child{
+    padding: 40px 63px 46px;
+    background-color: #aa7944;
+    max-width: 700px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.woonggin_news div:first-child h1{
+  font-size: 54px;
+}
+.woonggin_news div:first-child p{
+  font-size: 20px;
+}
+.woonggin_news div:last-child{
+    max-width: 1200px;
+    padding: 63px 85px 67px;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 0;
+}
+.woonggin_news div:last-child a{
+  line-height: 60px;
+  font-size: 22px;
+  display: block;
+}
+.woonggin_news div:last-child a span{
+  border: 1px solid #aa7944;
+  padding: 3px 25px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  color: #aa7944;
+  font-size: 18px;
+  margin-right: 30px;
+}
+
+/*푸터*/
+#section5{
+  width: 100%;
+  height: 900px;
+}
+footer{
+  width: 100%;
+  height: 250px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-content: center;
+}
+.company_infor{
+  display: flex;
+  gap: 20px;
+}
+.company_infor p a{
+  font-size: 20px;
+  color: #fff;
+}
+
+footer > div:last-child{
+  display: flex;
+}
+
+footer > div:last-child a{
+  color: #fff;
+}

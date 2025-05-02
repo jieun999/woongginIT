@@ -15,7 +15,7 @@ gnb.forEach(function (v, k, allitem) {
       let ht = sub[k].querySelector("ul").offsetHeight;
       gnb[k].querySelector(".sub").style.height = ht + "px";
       gnb[k].querySelector(".sub").classList.add("on");
-      document.querySelector(".head").style.backgroundColor = "#fff";
+      document.querySelector(".head").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       document.querySelector(".head").style.height = 440 + "px";
     } catch (error) {
       document.querySelector(".head").style.height = 80 + "px";
@@ -30,16 +30,36 @@ document.querySelector(".head ul").onmouseenter = function () {
     v.querySelector("a").classList.add("on");
   });
   document.querySelector(".head").style.backgroundColor = "#fff";
-  //document.querySelector(".head").style.height = 80 + "px";
-  //document.querySelector(".logo img").src =
-    //"https://www.cuchen.com/img/logo-d.svg";
 };
 document.querySelector(".head").onmouseleave = function () {
   myfnc();
   gnb.forEach(function (v, k) {
     v.querySelector("a").classList.remove("on");
   });
-  //document.querySelector(".head").style.backgroundColor = "transparent";
-  //document.querySelector(".logo img").src =
-    //"https://www.cuchen.com/img/logo.svg";
 };
+
+
+// const progressCircle = document.querySelector(".autoplay-progress svg");
+// const progressContent = document.querySelector(".autoplay-progress span");
+// var swiper = new Swiper(".mySwiper", {
+//   spaceBetween: 30,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 5000,
+//     disableOnInteraction: false
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   },
+//   on: {
+//     autoplayTimeLeft(s, time, progress) {
+//       progressCircle.style.setProperty("--progress", 1 - progress);
+//       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+//     }
+//   }
+// });

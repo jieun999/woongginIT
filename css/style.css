@@ -131,11 +131,11 @@
   }
 
   /* 디지털 혁신을 위한 파트너, 웅진 */
-  .digital{
+  .woonggin{
     width: 1700px;
     margin: 0 auto;
 }
-.digital > h1{
+.wj_title{
     margin: 0px 150px 50px 200px;
     font-size: 54px;
 }
@@ -169,6 +169,12 @@
   bottom: 50px;
   right: 50px;
 }
+.digital ul li:hover:after{
+  content: url(../images/digital/arrow_2.png);
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
 .digital_title h1{
     font-size: 52px;
 }
@@ -178,11 +184,19 @@
   letter-spacing: -1.5px;
   margin: 20px 0;
 }
-.digital_con{
+.digital ul li .digital_con{
   font-weight: bold;
   line-height: 30px;
   color: #fff;
 }
+.digital ul li:hover .digital_con{
+  color: #aa7944;
+}
 .digital ul li:nth-child(1){background: url(../images/digital/solution_2.png) center/cover;}
+.digital ul li:nth-child(1):hover{background: url(../images/digital/cloud_light_2.png) center/cover;}
+
 .digital ul li:nth-child(2){background: url(../images/digital/sap_2.png) center/cover;}
+.digital ul li:nth-child(2):hover{background: url(../images/digital/sap_light_2.png) center/cover;}
+
 .digital ul li:nth-child(3){background: url(../images/digital/cloud_2.png) center/cover;}
+.digital ul li:nth-child(3):hover{background: url(../images/digital/solution_light_2.png) center/cover;}

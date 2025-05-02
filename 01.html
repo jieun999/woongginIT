@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      header {
+        position: relative;
+      }
+      .menu {
+        max-width: 1700px;
+        margin: 0 auto;
+      }
+      .menu ul {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu ul li {
+        flex: 1 1 10%;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu ul li a:hover,
+      .menu ul li a.on {
+        background: #ccc;
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .menu ul li a:hover::after,
+      .menu ul li a.on::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        right: 30%;
+      }
+      .submenu {
+        position: absolute;
+        width: 100%;
+        /* height: 0; */
+        left: 0;
+        top: 50px;
+        background: rgba(0, 0, 0, 1);
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      /* .submenu.on {
+        height: 200px;
+      } */
+      .submenu .lnb {
+        max-width: 1700px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .submenu .lnb > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .submenu .lnb > ul > li {
+        flex: 1 1 20%;
+        line-height: 40px;
+        text-align: center;
+      }
+      .submenu .lnb > ul > li a {
+        color: #333;
+      }
+      .submenu .lnb > ul > li a:hover {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="logo"><a href="#"><img src="./images/header/header_logo.png" alt=""></a></p>
+      <div class="head_menu" >
+          <div class="menu">
+            <ul>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Industry</a></li>
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">미디어룸</a></li>
+              <li><a href="#">회사소개</a></li>
+            </ul>
+          </div>
+          <div class="submenu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴11</a></li>
+                    <li><a href="#">서브메뉴11</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴22</a></li>
+                    <li><a href="#">서브메뉴22</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴33</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴44</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴55</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="submenu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴111</a></li>
+                    <li><a href="#">서브메뉴111</a></li>
+                    <li><a href="#">서브메뉴111</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴222</a></li>
+                    <li><a href="#">서브메뉴222</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴333</a></li>
+                    <li><a href="#">서브메뉴333</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="submenu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="submenu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="submenu">
+            <div class="lnb">
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <p><a href="#">문의하기</a></p>
+      <p><a href="#">프로젝트사례</a></p>
+      <p><a href="#"><img src="./images/header/search_btn_2.png" alt=""></a></p>
+      <p><a href="#"><img src="./images/header/lang_btn_2.png" alt=""></a></p>
+    </header>
+
+    <script>
+      let subMenu = document.querySelectorAll(".submenu");
+      let lnb = document.querySelectorAll(".lnb");
+      let gnb = document.querySelectorAll(".menu ul li");
+
+      function myfnc(){
+        subMenu.forEach(function(v, k){
+          v.style.height="0px";
+          gnb[k].querySelector("a").classList.remove("on");
+          //메뉴 gnb(".menu ul li")를 숨겨주는 서식
+        })
+      };
+      myfnc();
+      //마우스를 올렸을 때: onmouseenter
+      //마우스를 뗐을 때: onmouseleave
+      gnb.forEach(function(v, k){
+        v.onmouseenter=function(){
+          myfnc();
+            let ht = lnb[k].offsetHeight;
+            //후버 동작 시, 작동하는 서식은 .menu ul li 즉 서브메뉴의 상위요소인 ul이기 때문에 .menu ul li 후버 시 갖고와야 하는 값은 gnb(.menu ul li)이다.
+            subMenu[k].style.height = ht +"px";
+        };
+        v.onmouseleave=function(){
+          myfnc();
+        }
+      })
+      //gnb(".menu ul li")를 선택해서 후버 시 서브메뉴창이 뜨게 하고 마우스를 떼면 사라지게 한다. 그러나 이렇게만 하면 ul에서 나가는 동시에 서브메뉴가 숨겨지기 때문에 클릭할 수 없어 이것을 유지시켜줘야 한다.
+
+      //부모를 두 번 만들어서 하나는 ul에 후버 시 서브메뉴가 나오게, 하나는 후버 시 서브메뉴가 ul li에 가도 메뉴가 들어가지 않고 유지되도록 한다.
+
+      subMenu.forEach(function(v, k){
+        v.onmouseenter = function(){
+          myfnc();
+          let ht = lnb[k].offsetHeight;
+          subMenu[k].style.height = ht + "px";
+          gnb[k].querySelector("a").classList.add("on");
+          //양식은 gnb와 동일하게, 대신 메뉴 gnb(".menu ul li")를 나타나게 해주는 서식을 여기에 한 번 더 사용한다.
+        };
+        v.onmouseleave = function(){myfnc();}
+      });
+    </script>
+  </body>
+</html>

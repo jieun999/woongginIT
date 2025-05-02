@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      /* text-align: center; */
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center;
+      align-items: center; */
+      background-position: center;
+      background-size: cover;
+    }
+    .swiper-slide .slide_txt{
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        color: #fff;
+    }
+    .swiper-slide .slide_txt h1{
+        font-size: 60px;
+    }
+    .swiper-slide .slide_txt p{
+        font-size: 24px;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      /* color: var(--swiper-theme-color); */
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: #aa7944;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+
+    .swiper-slide:first-child{background-image: url(./images/swiper_main/swiper_main_01.jpg);}
+    .swiper-slide:nth-child(2){background-image: url(./images/swiper_main/swiper_main_02.jpg);}
+    .swiper-slide:nth-child(3){background-image: url(./images/swiper_main/swiper_main_03.jpg);}
+    .swiper-slide:nth-child(4){background-image: url(./images/swiper_main/swiper_main_04.jpg);}
+    .swiper-slide:nth-child(5){background-image: url(./images/swiper_main/swiper_main_05.jpg);}
+    .swiper-slide:nth-child(6){background-image: url(./images/swiper_main/swiper_main_06.jpg);}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                웅진IT, 2025 상반기<br>
+                AWS 파트너리그 SAP 부문 수상
+            </h1>
+            <p>Korea Partner Prospecting League</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                웅진 IT, 네이버웍스<br>
+                프리미엄 파트너 선정!
+            </h1>
+            <p>최다 고객·최대 계정 운영</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                웅진은 변화하는<br>
+                디지털 비즈니스를 준비합니다.
+            </h1>
+            <p>
+                새로운 비즈니스에 민첩하게 대응할 수 있는<br>
+                지능형 IT 시스템을 만나보세요.
+            </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                AI를 만나 더 발전하는<br>
+                웅진의 기술
+            </h1>
+            <p>
+                더 똑똑하고 더 효율적인<br>
+                웅진의 IT 솔루션을 만나보세요.
+            </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                디지털 혁신의 중심에<br>
+                웅진이 있습니다.
+            </h1>
+            <p>웅진만의 독자적인 기술과 경험으로</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide_txt">
+            <h1>
+                기업 고객의 성공을 위해<br>
+                웅진이 함께합니다.
+            </h1>
+            <p>
+                기업 고객의 미래 가치를 창출할 수 있도록<br>
+                디지털 기술 기반의 혁신 방향을 제시합니다.
+            </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <rect width="2" height="900"></rect>
+        <!-- <circle cx="24" cy="24" r="20"></circle> -->
+      </svg>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{list-style: none;}
+
+    .title{
+      min-width: 1700px;
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #ccc;
+      line-height: 24px;
+    }
+    .title h1{font-size: 80px;}
+    .title p{font-size: 24px;}
+    
+    .solution{
+      width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 0 247px;
+      gap: 30px;
+      margin: 0 auto;
+    }
+    .solution .con{
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 260px;
+      text-align: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .solution .con:hover{
+      background: #aa7944;
+      color: #fff;
+    }
+    .solution .con p{font-size: 22px;}
+    .solution .con .bold{
+      font-size: 32px;
+      transition: 0.5s;
+      font-weight: bold;
+    }
+
+    .solution .con:hover .bold{font-size: 38px;}
+
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title">
+      <h1>Solution</h1>
+      <p>핵심 기술이 비즈니스를 만나다</p>
+    </div>
+    <div class="solution">
+      <div class="con">
+        <p>렌탈사업자를 위한 최고의 선택<br>
+          <span class="bold">WRMS</span>
+        </p>
+      </div>
+      <div class="con">
+        <p>The New Value Creation for Mobility<br>
+          <span class="bold">WDMS</span>
+        </p>
+      </div>
+      <div class="con">
+        <p>
+          <span class="bold">GAM SOLUTION</span><br>
+          Global Audit Management Solution<br>
+          <span class="subtitle">내부회계 및 권한정비 솔루션</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
